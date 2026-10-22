@@ -170,7 +170,204 @@
         </div>
       </header>
 
-      
+      <!-- Page Content -->
+      <section id="page-content" class="page-content">
+
+        <!-- Page Title -->
+        <div class="page-header" id="page-header">
+          <div>
+            <h1>Dashboard</h1>
+            <p class="page-subtitle">Welcome back, here's what's happening today.</p>
+          </div>
+          <div class="page-actions">
+            <button id="btn-export" class="btn btn-secondary">
+              <i data-lucide="download"></i>
+              Export
+            </button>
+            <button id="btn-add-new" class="btn btn-primary">
+              <i data-lucide="plus"></i>
+              Add New
+            </button>
+          </div>
+        </div>
+
+        <!-- Stat Cards -->
+        <div class="stats-grid" id="stats-grid">
+          <div class="stat-card" id="stat-revenue">
+            <div class="stat-icon revenue">
+              <i data-lucide="dollar-sign"></i>
+            </div>
+            <div class="stat-info">
+              <span class="stat-label">Total Revenue</span>
+              <span class="stat-value">$48,250</span>
+              <span class="stat-change positive">
+                <i data-lucide="trending-up"></i>
+                +12.5%
+              </span>
+            </div>
+          </div>
+
+          <div class="stat-card" id="stat-users">
+            <div class="stat-icon users">
+              <i data-lucide="users"></i>
+            </div>
+            <div class="stat-info">
+              <span class="stat-label">Active Users</span>
+              <span class="stat-value">2,420</span>
+              <span class="stat-change positive">
+                <i data-lucide="trending-up"></i>
+                +8.1%
+              </span>
+            </div>
+          </div>
+
+          <div class="stat-card" id="stat-orders">
+            <div class="stat-icon orders">
+              <i data-lucide="shopping-bag"></i>
+            </div>
+            <div class="stat-info">
+              <span class="stat-label">New Orders</span>
+              <span class="stat-value">385</span>
+              <span class="stat-change negative">
+                <i data-lucide="trending-down"></i>
+                -3.2%
+              </span>
+            </div>
+          </div>
+
+          <div class="stat-card" id="stat-conversion">
+            <div class="stat-icon conversion">
+              <i data-lucide="target"></i>
+            </div>
+            <div class="stat-info">
+              <span class="stat-label">Conversion</span>
+              <span class="stat-value">4.6%</span>
+              <span class="stat-change positive">
+                <i data-lucide="trending-up"></i>
+                +1.2%
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="charts-grid" id="charts-grid">
+          <div class="card chart-card" id="chart-revenue">
+            <div class="card-header">
+              <h2>Revenue Overview</h2>
+              <select id="revenue-period" class="select-sm">
+                <option>Last 7 days</option>
+                <option selected>Last 30 days</option>
+                <option>Last 90 days</option>
+              </select>
+            </div>
+            <div class="card-body">
+              <canvas id="revenue-chart"></canvas>
+            </div>
+          </div>
+
+          <div class="card chart-card" id="chart-traffic">
+            <div class="card-header">
+              <h2>Traffic Sources</h2>
+              <button id="traffic-more" class="icon-btn-sm" aria-label="More options">
+                <i data-lucide="more-horizontal"></i>
+              </button>
+            </div>
+            <div class="card-body">
+              <canvas id="traffic-chart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity Table -->
+        <div class="card" id="recent-activity">
+          <div class="card-header">
+            <h2>Recent Activity</h2>
+            <a href="#" id="view-all-link" class="link">View All</a>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table id="activity-table" class="table">
+                <thead>
+                  <tr>
+                    <th>User</th>
+                    <th>Action</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="user-cell">
+                        <div class="avatar avatar-sm" style="background: #6366f1;">J</div>
+                        <span>John Doe</span>
+                      </div>
+                    </td>
+                    <td>Purchased Pro Plan</td>
+                    <td><span class="status-badge success">Completed</span></td>
+                    <td>Oct 20, 2026</td>
+                    <td>
+                      <button class="icon-btn-sm" aria-label="More options">
+                        <i data-lucide="more-horizontal"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="user-cell">
+                        <div class="avatar avatar-sm" style="background: #f43f5e;">S</div>
+                        <span>Sarah Miller</span>
+                      </div>
+                    </td>
+                    <td>Updated Profile</td>
+                    <td><span class="status-badge info">In Progress</span></td>
+                    <td>Oct 19, 2026</td>
+                    <td>
+                      <button class="icon-btn-sm" aria-label="More options">
+                        <i data-lucide="more-horizontal"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="user-cell">
+                        <div class="avatar avatar-sm" style="background: #10b981;">M</div>
+                        <span>Mike Johnson</span>
+                      </div>
+                    </td>
+                    <td>Submitted Report</td>
+                    <td><span class="status-badge warning">Pending</span></td>
+                    <td>Oct 18, 2026</td>
+                    <td>
+                      <button class="icon-btn-sm" aria-label="More options">
+                        <i data-lucide="more-horizontal"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="user-cell">
+                        <div class="avatar avatar-sm" style="background: #f59e0b;">E</div>
+                        <span>Emily Chen</span>
+                      </div>
+                    </td>
+                    <td>Cancelled Subscription</td>
+                    <td><span class="status-badge danger">Cancelled</span></td>
+                    <td>Oct 17, 2026</td>
+                    <td>
+                      <button class="icon-btn-sm" aria-label="More options">
+                        <i data-lucide="more-horizontal"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
