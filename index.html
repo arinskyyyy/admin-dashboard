@@ -136,6 +136,41 @@
     </aside>
     <div id="sidebar-backdrop" class="sidebar-backdrop" aria-hidden="true"></div>
 
-    
+    <!--  Main Content -->
+    <main id="main-content" class="main-content">
+
+      <!-- Header -->
+      <header id="header" class="header">
+        <div class="header-left">
+          <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle sidebar">
+            <i data-lucide="menu"></i>
+          </button>
+          <div class="search-bar" id="search-bar">
+            <i data-lucide="search"></i>
+            <input type="text" id="search-input" placeholder="Search anything..." autocomplete="off">
+          </div>
+        </div>
+
+        <div class="header-right">
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+            <i data-lucide="moon"></i>
+          </button>
+          <button id="notifications-btn" class="icon-btn" aria-label="Notifications">
+            <i data-lucide="bell"></i>
+            <span class="notification-dot"></span>
+          </button>
+          <div id="user-profile" class="user-profile">
+            <div class="avatar" id="user-avatar">A</div>
+            <div class="user-info">
+              <span class="user-name">Admin User</span>
+              <span class="user-role">Administrator</span>
+            </div>
+            <i data-lucide="chevron-down" class="user-chevron"></i>
+          </div>
+        </div>
+      </header>
+
+      
+    </main>
   </body>
 </html>
